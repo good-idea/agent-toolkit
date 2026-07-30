@@ -22,12 +22,12 @@ TypeScript provides type safety and modern language features that improve develo
 
 ## Requirements
 
-- [ ] Create `src/main.ts` with a simple "hello world" console log or DOM manipulation
-- [ ] Configure TypeScript compiler to output compiled JS to `web/` directory
-- [ ] Ensure `tsconfig.json` includes proper settings for web/browser targeting
-- [ ] Add a `<script>` tag in the HTML that loads the compiled JS file
-- [ ] Verify the compilation works via build command (e.g., `pnpm run build` or similar)
-- [ ] The compiled JavaScript is executable in the browser with no errors
+- [x] Create `src/main.ts` with a simple "hello world" console log or DOM manipulation
+- [x] Configure TypeScript compiler to output compiled JS to `web/` directory
+- [x] Ensure `tsconfig.json` includes proper settings for web/browser targeting
+- [x] Add a `<script>` tag in the HTML that loads the compiled JS file
+- [x] Verify the compilation works via build command (e.g., `pnpm run build` or similar)
+- [x] The compiled JavaScript is executable in the browser with no errors
 
 ## Approach
 
