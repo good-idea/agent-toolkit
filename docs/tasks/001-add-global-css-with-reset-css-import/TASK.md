@@ -1,13 +1,13 @@
 ---
-id: "001"
-title: "Add global.css with reset.css import"
-slug: "add-global-css-with-reset-css-import"
-type: "feature"
-status: "open"
+id: '001'
+title: 'Add global.css with reset.css import'
+slug: 'add-global-css-with-reset-css-import'
+type: 'feature'
+status: 'in-progress'
 estimate: null
 milestone: null
-created: "2026-07-30"
-updated: "2026-07-30"
+created: '2026-07-30'
+updated: '2026-07-30'
 ---
 
 # Add global.css with reset.css import
