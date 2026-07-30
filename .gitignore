@@ -1,0 +1,24 @@
+node_modules/
+dist/
+
+# Git worktrees — each is its own checkout, not tracked by the parent repo
+worktrees/
+
+# Per-worktree metadata written by wt:create
+.worktree-info
+
+# Environment files — ignore .env variants but retain examples
+.env*
+!.env.example
+
+# pnpm is the canonical package manager; do not add npm lockfiles.
+package-lock.json
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo

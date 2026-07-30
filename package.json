@@ -1,0 +1,35 @@
+{
+  "name": "agent-toolkit",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.29.3",
+  "scripts": {
+    "task:create": "tsx ./scripts/tasks/create-task.ts",
+    "task:list": "tsx ./scripts/tasks/list-tasks.ts",
+    "task:update": "tsx ./scripts/tasks/update-task.ts",
+    "task:validate": "tsx ./scripts/tasks/validate-task.ts",
+    "task:validate-all": "tsx ./scripts/tasks/validate-all.ts",
+    "task:fix-order": "tsx ./scripts/tasks/fix-order.ts",
+    "wt:create": "bash ./scripts/worktree/wt-create.sh",
+    "wt:help": "bash ./scripts/worktree/wt-help.sh",
+    "wt:init": "bash ./scripts/worktree/wt-init.sh",
+    "wt:start": "bash ./scripts/worktree/wt-start.sh",
+    "wt:wrap": "bash ./scripts/worktree/wt-wrap.sh",
+    "test": "vitest run --project tasks && node --test ./scripts/run-package-command.test.mjs",
+    "test:scripts": "node --test ./scripts/run-package-command.test.mjs",
+    "test:all": "pnpm test",
+    "type-check": "tsc --noEmit",
+    "lint": "echo 'Configure lint for your project (e.g. eslint .)'",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "serve": "pnpm --filter web serve"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "prettier": "^3.6.2",
+    "tsx": "^4.22.3",
+    "typescript": "^5.0.0",
+    "vitest": "^4.1.5",
+    "zod": "^4.3.6"
+  }
+}

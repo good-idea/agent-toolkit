@@ -1,0 +1,10 @@
+{
+  "name": "web",
+  "private": true,
+  "scripts": {
+    "serve": "serve src --no-clipboard"
+  },
+  "dependencies": {
+    "serve": "^14.2.6"
+  }
+}
