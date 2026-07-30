@@ -3,7 +3,7 @@ id: '001'
 title: 'Add global.css with reset.css import'
 slug: 'add-global-css-with-reset-css-import'
 type: 'feature'
-status: 'in-progress'
+status: 'completed'
 estimate: null
 milestone: null
 created: '2026-07-30'
@@ -69,5 +69,30 @@ CSS resets normalize default browser styles to ensure consistent rendering acros
 
 ## Postmortem
 
-**Models:** Run `/session` and record the models used.
-**Notes:** What went well, what was tricky, approximations made, and anything to improve next time.
+### Models Used
+- **opencode/claude-haiku-4-5**: 55 turns, 1,180,780 tokens, $0.35
+
+### What Went Well
+- **Orchestrated execution:** All 5 subtasks executed in 4 parallel waves with clear dependencies
+- **Comprehensive CSS reset:** Agent created a production-quality reset stylesheet covering all major elements (396 lines)
+- **Proper validation:** All checks passed—lint, type-check, and test suite (9/9 tests)
+- **Clean file structure:** Correct relative paths from HTML to stylesheets; proper import chain
+- **Documentation:** Clear subtask definitions enabled autonomous execution
+
+### Key Decisions
+- Used parallel execution for independent subtasks (001+002, then 003+004) for efficiency
+- CSS reset followed modern patterns with accessibility features (sr-only, focus-visible)
+- global.css kept minimal with comment placeholders for future project-wide styles
+
+### No Issues Encountered
+- All file operations succeeded on first attempt
+- No path resolution or syntax errors
+- All validation checks passed without modification
+
+### Process Notes
+- Subtask template approach provided clear, autonomous work units
+- Orchestrator role (not implementing) enabled parallel work and better resource utilization
+- Estimated execution time ~30 minutes; actual ~60 minutes (includes setup, planning, verification overhead)
+
+### Follow-up Items
+- None identified; task requirements fully satisfied and verified
