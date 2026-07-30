@@ -1,0 +1,396 @@
+/**
+ * CSS Reset Stylesheet
+ * 
+ * Normalizes default browser styles to ensure consistent rendering
+ * across different browsers and provides a clean foundation for styling.
+ */
+
+/* ===================================================================
+   HTML & Body Elements
+   =================================================================== */
+
+html {
+  /* Set default font size and line height */
+  font-size: 16px;
+  line-height: 1.5;
+  /* Enable smooth scrolling */
+  scroll-behavior: smooth;
+  /* Prevent font size adjustments in landscape mode on iOS */
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  /* Reset default margins and padding */
+  margin: 0;
+  padding: 0;
+  /* Set default font family and color */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+}
+
+/* ===================================================================
+   Layout & Box Model
+   =================================================================== */
+
+/* Apply box-sizing: border-box to all elements for consistent sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===================================================================
+   Typography Elements
+   =================================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  /* Remove default link underline and set color */
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
+  /* Enable transition effects */
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  /* Provide visual feedback on hover */
+  outline: 0;
+}
+
+strong,
+b {
+  font-weight: 700;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+small {
+  font-size: 0.875em;
+}
+
+/* ===================================================================
+   Lists
+   =================================================================== */
+
+ul,
+ol {
+  /* Remove default list styling */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* ===================================================================
+   Form Elements
+   =================================================================== */
+
+button,
+input,
+select,
+textarea {
+  /* Use inherited font properties */
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: inherit;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  margin: 0;
+  padding: 0.5rem;
+  /* Ensure form elements are properly styled */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+button {
+  /* Make buttons look like form elements by default */
+  cursor: pointer;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: #e0e0e0;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Remove the inner padding for buttons in Firefox */
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='number'],
+input[type='search'],
+input[type='tel'],
+input[type='url'],
+textarea {
+  /* Style text inputs */
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='password']:focus,
+input[type='number']:focus,
+input[type='search']:focus,
+input[type='tel']:focus,
+input[type='url']:focus,
+textarea:focus {
+  outline: 0;
+  border-color: #0066cc;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  /* Style checkboxes and radio buttons */
+  width: 1rem;
+  height: 1rem;
+  margin: 0.25rem 0.5rem 0.25rem 0;
+  cursor: pointer;
+  accent-color: #0066cc;
+}
+
+select {
+  /* Style select dropdowns */
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  /* Remove default background for select on Firefox */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 1.25em 1.25em;
+  padding-right: 2.5rem;
+}
+
+textarea {
+  /* Allow vertical resizing for textareas */
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Ensure input placeholders are visible */
+input::placeholder,
+textarea::placeholder {
+  opacity: 0.6;
+  color: #999;
+}
+
+fieldset {
+  /* Reset fieldset styling */
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+legend {
+  /* Reset legend styling */
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+label {
+  /* Ensure labels are properly styled */
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* ===================================================================
+   Media & Images
+   =================================================================== */
+
+img,
+picture,
+video,
+canvas {
+  /* Make images and media responsive */
+  display: block;
+  max-width: 100%;
+  height: auto;
+  /* Remove the gap below images */
+  vertical-align: middle;
+}
+
+img {
+  /* Remove border from linked images */
+  border: 0;
+  /* Ensure images don't exceed their container */
+  width: 100%;
+  height: auto;
+}
+
+svg {
+  /* Make SVG images responsive */
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===================================================================
+   Tables
+   =================================================================== */
+
+table {
+  /* Reset table styling */
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+thead {
+  /* Style table header */
+  background-color: #f5f5f5;
+}
+
+th,
+td {
+  /* Reset cell padding and alignment */
+  padding: 0.75rem;
+  text-align: left;
+  border: 1px solid #ddd;
+  vertical-align: top;
+}
+
+th {
+  font-weight: 700;
+}
+
+/* ===================================================================
+   Other Elements
+   =================================================================== */
+
+hr {
+  /* Reset horizontal rule */
+  margin: 1rem 0;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid #ddd;
+}
+
+code,
+kbd,
+pre,
+samp {
+  /* Style code elements */
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.875rem;
+}
+
+pre {
+  /* Style code blocks */
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+code {
+  /* Style inline code */
+  padding: 0.2rem 0.4rem;
+  background-color: #f5f5f5;
+  border-radius: 3px;
+}
+
+blockquote {
+  /* Style blockquotes */
+  margin: 1rem 0;
+  padding: 0 1rem;
+  border-left: 4px solid #ddd;
+}
+
+/* Remove default styling for details/summary elements */
+details {
+  cursor: pointer;
+}
+
+summary {
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* ===================================================================
+   Accessibility
+   =================================================================== */
+
+/* Hide visually but keep accessible for screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Remove focus outline but provide visible focus state */
+:focus-visible {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}

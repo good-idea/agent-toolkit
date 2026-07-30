@@ -33,10 +33,37 @@ CSS resets normalize default browser styles to ensure consistent rendering acros
 2. Add reset.css with modern CSS reset patterns (e.g., normalize margins, set box-sizing, base typography)
 3. Create global.css with @import statement
 4. Link global.css in the HTML document head
+5. Validate syntax and run standard checks
+
+## Plan
+
+### Implementation Steps
+
+1. **Create directory structure** → [Subtask 001](./subtasks/001-create-styles-directory/SUBTASK.md)
+   - Create `web/styles/` directory to house CSS files
+
+2. **Create reset.css** → [Subtask 002](./subtasks/002-create-reset-css/SUBTASK.md)
+   - Add modern CSS reset covering: default margins/padding removal, box-sizing, base typography, form normalization, image responsiveness
+
+3. **Create global.css** → [Subtask 003](./subtasks/003-create-global-css/SUBTASK.md)
+   - Import reset.css using `@import url('./reset.css');`
+   - Serve as entry point for project-wide styles
+
+4. **Link in HTML** → [Subtask 004](./subtasks/004-link-stylesheet-in-html/SUBTASK.md)
+   - Add `<link rel="stylesheet" href="../styles/global.css" />` in `web/src/index.html` head
+
+5. **Validate & Check** → [Subtask 005](./subtasks/005-validate-and-check/SUBTASK.md)
+   - Verify CSS syntax is valid
+   - Run `pnpm lint` and `pnpm type-check`
+   - Confirm stylesheets load correctly
 
 ## Subtasks
 
-Create files in `./subtasks/` only when this task needs to be broken into independently trackable work. List each created subtask here with a link to its `SUBTASK.md` file.
+- [001: Create web/styles directory](./subtasks/001-create-styles-directory/SUBTASK.md)
+- [002: Create web/styles/reset.css](./subtasks/002-create-reset-css/SUBTASK.md)
+- [003: Create web/styles/global.css](./subtasks/003-create-global-css/SUBTASK.md)
+- [004: Link global.css in HTML head](./subtasks/004-link-stylesheet-in-html/SUBTASK.md)
+- [005: Validate CSS and run checks](./subtasks/005-validate-and-check/SUBTASK.md)
 
 ---
 
