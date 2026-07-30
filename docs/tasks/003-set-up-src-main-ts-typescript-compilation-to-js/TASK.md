@@ -3,7 +3,7 @@ id: '003'
 title: 'Set up src/main.ts TypeScript compilation to JS'
 slug: 'set-up-src-main-ts-typescript-compilation-to-js'
 type: 'feature'
-status: 'in-progress'
+status: 'completed'
 estimate: null
 milestone: null
 created: '2026-07-30'
@@ -46,5 +46,19 @@ Create files in `./subtasks/` only when this task needs to be broken into indepe
 
 ## Postmortem
 
-**Models:** Run `/session` and record the models used.
-**Notes:** What went well, what was tricky, approximations made, and anything to improve next time.
+**Models:** claude-sonnet-4-5 (30 turns, 777k tokens, $0.61)
+
+**Notes:** 
+
+*What went well:*
+- Clean separation of concerns: created `tsconfig.web.json` to avoid conflicts with the existing NodeNext-configured `tsconfig.json`
+- Build pipeline straightforward: added `build` and `build:watch` scripts
+- All checks passed on first run after implementation
+- The `dist/` directory was already in `.gitignore`, so no additional configuration needed
+
+*Key decisions:*
+- Output directory: `web/src/dist/` keeps compiled JS alongside HTML for simple serving
+- Used ES2022 with DOM libs for modern browser features
+- Included both console.log and DOM manipulation in the example to demonstrate both capabilities
+
+*Nothing tricky:* Implementation was straightforward, followed the task requirements exactly.
