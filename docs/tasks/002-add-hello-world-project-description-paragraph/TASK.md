@@ -3,7 +3,7 @@ id: '002'
 title: 'Add hello world project description paragraph'
 slug: 'add-hello-world-project-description-paragraph'
 type: 'feature'
-status: 'in-progress'
+status: 'completed'
 estimate: null
 milestone: null
 created: '2026-07-30'
