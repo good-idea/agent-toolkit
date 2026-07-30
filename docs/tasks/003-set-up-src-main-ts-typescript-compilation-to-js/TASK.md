@@ -1,13 +1,13 @@
 ---
-id: "003"
-title: "Set up src/main.ts TypeScript compilation to JS"
-slug: "set-up-src-main-ts-typescript-compilation-to-js"
-type: "feature"
-status: "open"
+id: '003'
+title: 'Set up src/main.ts TypeScript compilation to JS'
+slug: 'set-up-src-main-ts-typescript-compilation-to-js'
+type: 'feature'
+status: 'in-progress'
 estimate: null
 milestone: null
-created: "2026-07-30"
-updated: "2026-07-30"
+created: '2026-07-30'
+updated: '2026-07-30'
 ---
 
 # Set up src/main.ts TypeScript compilation to JS
