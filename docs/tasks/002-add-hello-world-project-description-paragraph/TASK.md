@@ -1,13 +1,13 @@
 ---
-id: "002"
-title: "Add hello world project description paragraph"
-slug: "add-hello-world-project-description-paragraph"
-type: "feature"
-status: "open"
+id: '002'
+title: 'Add hello world project description paragraph'
+slug: 'add-hello-world-project-description-paragraph'
+type: 'feature'
+status: 'in-progress'
 estimate: null
 milestone: null
-created: "2026-07-30"
-updated: "2026-07-30"
+created: '2026-07-30'
+updated: '2026-07-30'
 ---
 
 # Add hello world project description paragraph
